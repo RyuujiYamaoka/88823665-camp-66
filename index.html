@@ -1,78 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8"/>
+    <title>CSS</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
 </head>
 <body>
-<h1>Workshop #HTML - FORM</h1> 
+    <div class="container mt-5">
+        <form>
+            <div class="row mb-3">
+                <label for="fname" class="col-sm-4 col-form-label">ชื่อ <span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="fname" placeholder="ชื่อ">
+                </div>
+            </div>
 
+            <div class="row mb-3">
+                <label for="lname" class="col-sm-4 col-form-label">สกุล</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="lname">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="birth" class="col-sm-4 col-form-label">วัน/เดือน/ปีเกิด</label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" id="birth">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="age" class="col-sm-4 col-form-label">อายุ</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="age">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">เพศ</label>
+                <div class="col-sm-8">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" id="male">
+                        <label for="male" class="form-check-label">ชาย</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" id="female">
+                        <label for="female" class="form-check-label">หญิง</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="image" class="col-sm-4 col-form-label">รูป</label>
+                <div class="col-sm-8">
+                    <input type="file" class="form-control" id="image">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="address" class="col-sm-4 col-form-label">ที่อยู่</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="address" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="color" class="col-sm-4 col-form-label">สีที่ชอบ</label>
+                <div class="col-sm-8">
+                    <select class="form-select" id="color">
+                        <option>สีแดง</option>
+                        <option>สีเขียว</option>
+                        <option>สีเหลือง</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">เพลงที่ชอบ</label>
+                <div class="col-sm-8">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="song" id="เพื่อชีวิต">
+                        <label for="เพื่อชีวิต" class="form-check-label">เพื่อชีวิต</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="song" id="ลูกทุ่ง">
+                        <label for="ลูกทุ่ง" class="form-check-label">ลูกทุ่ง</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="song" id="อื่นๆ">
+                        <label for="อื่นๆ" class="form-check-label">อื่นๆ</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">ยินยอมให้เก็บข้อมูล
+                        </label>
+                      </div>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <button type="reset" class="btn btn-secondary float-start">Reset</button>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success float-end">Submit</button>
+                </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<form>
-    
-    <label for="fname">ชื่อ&emsp;&emsp;&emsp;&emsp;&nbsp;&ensp;</label>
-    <input type="text" id="fname" name="fname"><br>
-
-    <label for="lname">นามสกุล&emsp;&emsp;&ensp;</label>
-    <input type="text" id="lname" name="lname"><br>
-
-    <label for="date">วัน/เดือน/ปีเกิด</label>
-    <input type="date" id="date" date="date"><br> 
-
-    <label for="date">อายุ&emsp;&emsp;&emsp;&emsp;&nbsp;</label>
-    <input type="text" id="tyear" year="yaer"><br> 
-
-</form>
-<label for="date">เพศ&emsp;&emsp;&emsp;&emsp;&nbsp;</label>
-
-    <input type="radio" id="Male" name="Gender" value="Male">
-    <label for="Male">ชาย</label>
-
-    <input type="radio" id="Female" name="Gender" value="Female">
-    <label for="Female">หญิง</label><br>
-
-<form>
-    <label for="image">รูป&emsp;&emsp;&emsp;&emsp;&nbsp;&ensp;</label>
-    <input type="file" id="myfile" name="myfile">
-    </form>
-
-<form>
-    <label for="adress">ที่อยู่&emsp;&emsp;&emsp;&emsp;</label>
-    <textarea rows="4" cols="30"></textarea>
-    </form>
-
-    <form action="/submit" method="post">
-        <label for="fruits">สีที่ชอบ&emsp;&emsp;&nbsp;&ensp;</label>
-        <select id="fruits" name="fruits">
-
-            <option value="apple">แดง</option>
-            <option value="banana">ฟ้า</option>
-            <option value="orange">เขียว</option>
-            <option value="mango">ชมพู</option>
-
-        </select>
-        <br>
-
-        <label for="date">แนวเพลงที่ชอบ</label>
-
-    <input type="radio" id="เพื่อชีวิต" name="style" value="เพื่อชีวิต">
-    <label for="เพื่อชีวิต">เพื่อชีวิต</label>
-    <input type="radio" id="ลูกทุ่ง" name="style" value="ลูกทุ่ง">
-    <label for="ลูกทุ่ง">ลูกทุ่ง</label>
-    <input type="radio" id="อื่นๆ" name="style" value="อื่นๆ">
-    <label for="อื่นๆ">อื่นๆ</label><br><br>
-    <input type="checkbox" id="keepdata" name="keeepdata" value="keepdata">
-
-<label for="keepdata"> ยินยอมให้เก็บข้อมูล</label><br>
-
-<div style="margin-bottom: 20px;">
-</div>
-
-<input type="reset" value="Reset">
-
-
-
-&emsp;&emsp;&nbsp;&ensp;&emsp;&emsp;&nbsp;&ensp;
-<input type="submit" value="Submit"><br>
-        <br><br>
