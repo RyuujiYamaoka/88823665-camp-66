@@ -99,7 +99,7 @@
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailPattern.test(email.val())) {
                 email.addClass('is-invalid');
-                $('#invalid-email').html("<b><u>Please enter a valid email address.</u></b>");
+                $('#invalid-email').html("<b><u>Please enter a email address.</u></b>");
                 valid = false;
             } else {
                 email.removeClass('is-invalid');
