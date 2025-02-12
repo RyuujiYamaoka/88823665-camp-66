@@ -9,12 +9,12 @@
             <!-- /.register-logo -->
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="register-box-msg">Register a new membership</p>
+                    <p class="register-box-msg">Register</p>
                     <form action="{{ url('register') }}" onsubmit="return checkInfo();" method="post">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" name="name" id="name" class="form-control"
-                                placeholder="Full Name" />
+                                placeholder="Name" />
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                             <div class="valid-feedback">
                                 OK
@@ -90,7 +90,7 @@
 
             if (name.val().trim() === "") {
                 name.addClass('is-invalid');
-                $('#invalid-name').html("<b><u>กรุณาระบุชื่อ</u></b>");
+                $('#invalid-name').html("<b><u>Please enter your name.</u></b>");
                 valid = false;
             } else {
                 name.removeClass('is-invalid');
@@ -99,7 +99,7 @@
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailPattern.test(email.val())) {
                 email.addClass('is-invalid');
-                $('#invalid-email').html("<b><u>กรุณาระบุอีเมลให้ถูกต้อง</u></b>");
+                $('#invalid-email').html("<b><u>Please enter a valid email address.</u></b>");
                 valid = false;
             } else {
                 email.removeClass('is-invalid');
@@ -108,14 +108,14 @@
             const passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
             if (!passPattern.test(password.val())) {
                 password.addClass('is-invalid');
-                $('#invalid-password').html("<b><u>รหัสผ่านต้องมีตัวเลข ตัวอักษรพิมพ์เล็ก และพิมพ์ใหญ่</u></b>");
+                $('#invalid-password').html("<b><u>Password must contain numbers, lowercase, and uppercase letters.</u></b>");
                 valid = false;
             } else {
                 password.removeClass('is-invalid');
             }
 
             if (!mycheckbox.prop('checked')) {
-                alert("กรุณายอมรับข้อกำหนด");
+                alert("Please accept the terms and conditions.");
                 valid = false;
             }
 
